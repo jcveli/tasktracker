@@ -6,13 +6,12 @@ FILE_PATH = 'data.json'
 def load_tasks():
     try:
         with open(FILE_PATH, 'r') as file:
-            data = json.load(file)
-            return data
+            return json.load(file)
     except FileNotFoundError:
         print('File not found, creating new file...')
-        with open(file=FILE_PATH, mode='w') as file:
-            data = []
-            json.dump(data, file, indent=4)
+        data = []
+        save_tasks(data)
+        return data
     except json.JSONDecodeError:
         print('Error decoding JSON data')
         return []
