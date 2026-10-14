@@ -39,6 +39,6 @@ list - Lists all tasks.
 
 Also added tests for the above actions using unittest module.
 
-Worked with PyCharm IDE. 
+Worked with PyCharm IDE and Claude to guide me through the assignment. 
 
 
